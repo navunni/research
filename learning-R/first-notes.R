@@ -50,7 +50,7 @@ vector()
 
 attributes()
 
-#3: Creating Vectors
+#3: Vectors, Lists
 
 c()
 
@@ -61,3 +61,11 @@ x <- c(TRUE, FALSE) ## logical
 x <- c("a", "b", "c", "..") ## characters
 x <- c(1:29) ## integer
 x <- c(1 + 5i, 2 + 4i) ## complex
+
+# You can also use the vector () function to do this as well.
+
+x <- vector("numeric", length = 15)
+x
+
+# result => [1] 0 0 0 0 0.....
+
