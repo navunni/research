@@ -67,5 +67,4 @@ x <- c(1 + 5i, 2 + 4i) ## complex
 x <- vector("numeric", length = 15)
 x
 
-# result => [1] 0 0 0 0 0.....
-
+# result => [1] 0 0 0 0 0..... #nolint
