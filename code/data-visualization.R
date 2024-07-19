@@ -2,6 +2,8 @@ library(readr)
 library(dplyr)
 library(ggplot2)
 
+# extracting data from csv file
+
 file_path <- "data/directory-homeless-population-by-year.csv"
 data <- read_csv(file_path)
 
@@ -20,11 +22,12 @@ ggplot(total_homeless_per_year, aes(x = Year, y = Total_Homeless)) +
 ggplot(data, aes(x = Year, y = `Homeless Estimates`, color = Area)) +
   geom_line(size = 1) +
   geom_point(size = 2) +
-  labs(title = "Homeless Population Estimation by Area Over Four Years", 
-    x = "Year",
-       y = "Homeless Estimates") +
+  labs(title = "Homeless Population Estimation by Area Over Four Years",
+       x = "Year",
+       y = "Homeless Population Estimation") +
   theme_grey() +
   theme(legend.position = "bottom") +
   scale_color_brewer(palette = "Set1")
 
 print(data, n = 32)
+# 32 is the number of rows for the original dataset
